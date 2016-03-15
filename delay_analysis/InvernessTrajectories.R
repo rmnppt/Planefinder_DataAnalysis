@@ -25,7 +25,7 @@ pdf("delay_analysis/TwoCities.pdf", 7, 4, TRUE)
 ggplot(TwoCities, 
        aes(x = ntime/60, y = Altitude.x)) +
   geom_line(aes(group = id), col = "red", alpha = 0.5) +
-  xlim(0, 2000) +
+  xlim(0, 50) +
   ylab("Altitude") +
   xlab("Imaginary Time") +
   facet_wrap(~ AirportName)
@@ -34,7 +34,7 @@ ggplot(TwoCities,
        aes(x = ntime/60, y = Altitude.x)) +
   geom_line(aes(group = id), col = "red", alpha = 0.5) +
   geom_rug(data = delay, sides = "b", col = "red", alpha = 0.5) +
-  xlim(0, 2000) +
+  xlim(0, 50) +
   ylab("Altitude") +
   xlab("Imaginary Time") +
   facet_wrap(~ AirportName)
